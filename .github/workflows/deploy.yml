@@ -50,4 +50,4 @@ jobs:
             docker pull ${{ secrets.DOCKER_USERNAME }}/my-react-app:latest
             docker stop my-react-container || true
             docker rm my-react-container || true
-            docker run -d -p 3000:80 --name my-react-container ${{ secrets.DOCKER_USERNAME }}/my-react-app:latest
+            docker run -d -p 3001:80 --name my-react-container ${{ secrets.DOCKER_USERNAME }}/my-react-app:latest
