@@ -42,7 +42,7 @@ jobs:
         uses: appleboy/ssh-action@v0.1.10
         with:
           host: "jjsornwakii.3bbddns.com"
-          username: "jjj"
+          username: "jj"
           key: ${{ secrets.SERVER_PRIVATE_KEY }}
           port : 34722
           script: |
