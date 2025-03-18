@@ -41,9 +41,10 @@ jobs:
       - name: Deploy to server
         uses: appleboy/ssh-action@v0.1.10
         with:
-          host: "jjsornwakii.3bbddns.com:34722"
-          username: "jj"
+          host: "jjsornwakii.3bbddns.com"
+          username: "jjj"
           key: ${{ secrets.SERVER_PRIVATE_KEY }}
+          port : 34722
           script: |
             docker pull my-react-app
             docker stop my-react-container || true
