@@ -47,7 +47,7 @@ jobs:
           port : 34722
           script: |
             echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-            docker pull my-react-app
+            docker pull jjsornwakii/my-react-app:latest
             docker stop my-react-container || true
             docker rm my-react-container || true
-            docker run -d -p 3000:80 --name my-react-container my-react-app
+            docker run -d -p 3000:80 --name my-react-container jjsornwakii/my-react-app:latest
